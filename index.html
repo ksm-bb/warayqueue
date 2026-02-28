@@ -123,8 +123,8 @@
             <div className="flex items-center gap-1">
               <h1 className="text-2xl font-black italic tracking-tighter flex">
                 {/* ✏️ [แก้ได้] เปลี่ยนชื่อแอปที่นี่ เช่น "MYSHOP".split('') */}
-                {"องุ่นหวาน".split('').map((char, index) => (
-                  <span key={index} className="bg-gradient-to-br from-[#9673D2] to-[#CCAAE6] bg-clip-text text-transparent drop-shadow-sm inline-block animate-text-wave" style={{ animationDelay: `${index * 0.1}s` }}>{char}</span>
+                {"waray".split('').map((char, index) => (
+                  <span key={index} className="bg-gradient-to-br from-[#93a4ff] to-[#c7c5fe] bg-clip-text text-transparent drop-shadow-sm inline-block animate-text-wave" style={{ animationDelay: `${index * 0.1}s` }}>{char}</span>
                 ))}
               </h1>
               {/* ✏️ [แก้ได้] ปุ่ม Admin/Guest badge — ถ้าไม่ต้องการแสดงให้ลบ <button> นี้ออก */}
@@ -477,7 +477,7 @@
       // 🌐 API: ลิงก์ Google Apps Script Web App
       // ==========================================
       // ✏️ [แก้ได้] เปลี่ยน URL ตรงนี้เมื่อ Deploy Google Apps Script ใหม่
-      const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyvdMaAgfMLFs1KToyQkH5CI31jzXXKMsnIwMUjPitIPhgkrwCv-it8_scA9e6MAUVu/exec";
+      const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxHNkwMjij19OIYAcGnpNNXIVUls8vXhh__tiHehK-aFt9M7iJwHa3iI9rdr1v_7N6d/exec";
 
       // ฟังก์ชันเรียก API (POST) — ไม่ต้องแก้
       const fetchAPI = async (payload) => {
@@ -1072,4 +1072,5 @@
   </script>
 </body>
 </html>
+
 
