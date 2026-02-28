@@ -53,12 +53,12 @@
     // - textSoft = สีข้อความรอง
     // - pinkDeep, blueDeep, purpleDeep, orangeDeep = สีเข้มสำหรับข้อความ/ไอคอน accent
     const COLORS = {
-      blue: '#E2CEF3',       // สีพื้น section บน
+      blue: '#d2e7fb',       // สีพื้น section บน
       pink: '#E2F1F8',       // สี blob พื้นหลัง (top-left)
       purple: '#FCF6DE',     // สี blob พื้นหลัง (กลาง)
-      orange: '#E2CEF3',     // สีพื้น NEXT QUEUE section
+      orange: '#d2e7fb',     // สีพื้น NEXT QUEUE section
       bg: '#e1c5f5',         // ⭐ สีพื้นหลังทั้งเพจ
-      white: '#E2CEF3',      // สีใช้แทน white ใน border บางจุด
+      white: '#d2e7fb',      // สีใช้แทน white ใน border บางจุด
       textMain: '#8e83fc',   // ⭐ สีหลักของข้อความและปุ่มหลัก (ม่วง)
       textSoft: '#dd8df7',   // สีข้อความรอง
       pinkDeep: '#8e83fc',   // สี accent เข้ม (ปุ่ม, badge)
@@ -118,7 +118,7 @@
     const Header = React.memo(({ isAdmin, setIsAdmin, setShowAuthModal, handleImageUpload, profileImage }) => (
       <div className="px-5 pt-6 pb-2 relative z-10">
         <div className="bg-white/40 backdrop-blur-md rounded-[32px] p-4 shadow-xl shadow-[#9673D2]/20 border border-white/50 flex items-center justify-between h-20 relative overflow-hidden group">
-          <div className="absolute left-6 top-1/2 -translate-y-1/2 w-24 h-8 bg-[#E2CEF3]/40 blur-xl rounded-full"></div>
+          <div className="absolute left-6 top-1/2 -translate-y-1/2 w-24 h-8 bg-[#d2e7fb]/40 blur-xl rounded-full"></div>
           <div className="flex flex-col justify-center ml-2 relative z-10">
             <div className="flex items-center gap-1">
               <h1 className="text-2xl font-black italic tracking-tighter flex">
@@ -159,7 +159,7 @@
     // ==========================================
     // ✏️ [แก้ได้] ในนี้แก้ได้:
     // - ป้ายชื่อ: แก้ "ความสำเร็จวันนี้" เป็นข้อความอื่น
-    // - สีกลีบดอก: แก้ fill="#E2CEF3" เป็นสีอื่น
+    // - สีกลีบดอก: แก้ fill="#d2e7fb" เป็นสีอื่น
     // - สีเกสร: แก้ fill="#fffae7" เป็นสีอื่น
     // - อีโมจิ particle: แก้ 💜 🪻 เป็นอีโมจิอื่น
     const ProgressFlower = React.memo(({ progress, todayTasksLength, doneToday, triggerFlowerBounce, isBouncing }) => {
@@ -188,9 +188,9 @@
                   <g className="animate-breathe">
                     <g transform={`scale(${bloomScale})`} className="transition-transform duration-1000 cubic-bezier(0.34, 1.56, 0.64, 1)">
                       <g transform="translate(-50, -50)">
-                        {/* ✏️ [แก้ได้] สีกลีบดอก — เปลี่ยน fill="#E2CEF3" */}
+                        {/* ✏️ [แก้ได้] สีกลีบดอก — เปลี่ยน fill="#d2e7fb" */}
                         {petals.map((p, i) => (
-                          <circle key={i} cx={p.cx} cy={p.cy} r={p.r} fill="#E2CEF3" opacity="0.95" className="transition-all duration-700"/>
+                          <circle key={i} cx={p.cx} cy={p.cy} r={p.r} fill="#d2e7fb" opacity="0.95" className="transition-all duration-700"/>
                         ))}
                         {/* ✏️ [แก้ได้] สีเกสรดอก — เปลี่ยน fill="#fffae7" */}
                         <circle cx="50" cy="50" r="14" fill="#fffae7" className="transition-all duration-700" />
@@ -288,10 +288,10 @@
         {task.status === 'doing' && (
            <div className="absolute inset-0 pointer-events-none z-0">
              {/* ✏️ [แก้ได้] อีโมจิ particle ซ้าย-ขวาของการ์ด doing */}
-             <div className="absolute -bottom-2 -left-3 text-[14px] animate-float-particle-1 drop-shadow-sm">💜</div>
-             <div className="absolute top-[30%] -left-4 text-[10px] animate-float-particle-3 drop-shadow-sm" style={{ animationDelay: '1.5s' }}>🪻</div>
-             <div className="absolute -bottom-2 -right-3 text-[14px] animate-float-particle-2 drop-shadow-sm" style={{ animationDelay: '0.5s' }}>💜</div>
-             <div className="absolute top-[30%] -right-4 text-[10px] animate-float-particle-1 drop-shadow-sm" style={{ animationDelay: '1.2s' }}>🪻</div>
+             <div className="absolute -bottom-2 -left-3 text-[14px] animate-float-particle-1 drop-shadow-sm"> 🦊</div>
+             <div className="absolute top-[30%] -left-4 text-[10px] animate-float-particle-3 drop-shadow-sm" style={{ animationDelay: '1.5s' }}>🦊</div>
+             <div className="absolute -bottom-2 -right-3 text-[14px] animate-float-particle-2 drop-shadow-sm" style={{ animationDelay: '0.5s' }}>🦊</div>
+             <div className="absolute top-[30%] -right-4 text-[10px] animate-float-particle-1 drop-shadow-sm" style={{ animationDelay: '1.2s' }}>🦊</div>
            </div>
         )}
         {/* ✏️ [แก้ได้] แถบสีซ้ายตามช่องทาง — เปลี่ยน hex สีตามชื่อ channel */}
@@ -371,9 +371,9 @@
       return (
         <div className="bg-white/90 backdrop-blur-xl rounded-[32px] p-5 shadow-[0_12px_30px_rgba(226,206,243,0.5)] border-[4px] border-white mb-5 animate-fadeIn">
           <div className="flex justify-between items-center mb-4 px-2">
-            <button onClick={() => setCurrentMonth(new Date(year, month - 1, 1))} className="p-1.5 hover:bg-[#E2CEF3] rounded-full transition-colors text-[#dd8df7]"><IconChevronLeft size={20}/></button>
+            <button onClick={() => setCurrentMonth(new Date(year, month - 1, 1))} className="p-1.5 hover:bg-[#d2e7fb] rounded-full transition-colors text-[#dd8df7]"><IconChevronLeft size={20}/></button>
             <h3 className="font-black text-[16px] text-[#7D45C6] tracking-widest">{monthNames[month]} {year}</h3>
-            <button onClick={() => setCurrentMonth(new Date(year, month + 1, 1))} className="p-1.5 hover:bg-[#E2CEF3] rounded-full transition-colors text-[#dd8df7]"><IconChevronRight size={20}/></button>
+            <button onClick={() => setCurrentMonth(new Date(year, month + 1, 1))} className="p-1.5 hover:bg-[#d2e7fb] rounded-full transition-colors text-[#dd8df7]"><IconChevronRight size={20}/></button>
           </div>
           
           {/* ✏️ [แก้ได้] ชื่อวันใน header ปฏิทิน — เปลี่ยนเป็นภาษาไทย เช่น ['อา','จ','อ','พ','พฤ','ศ','ส'] */}
@@ -400,7 +400,7 @@
                       isSelected 
                         ? 'bg-[#8e83fc] text-white rounded-full font-black shadow-md scale-105'
                         : isToday 
-                          ? 'text-[#8e83fc] font-black bg-[#E2CEF3] rounded-full border-[2px] border-white'
+                          ? 'text-[#8e83fc] font-black bg-[#d2e7fb] rounded-full border-[2px] border-white'
                           : 'text-[#dd8df7] font-bold hover:bg-[#f4f0fc] hover:border-[2px] hover:border-white hover:shadow-sm rounded-full'
                     }`}
                   >
@@ -1072,6 +1072,7 @@
   </script>
 </body>
 </html>
+
 
 
 
