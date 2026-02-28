@@ -60,11 +60,11 @@
       bg: '#e1c5f5',         // ⭐ สีพื้นหลังทั้งเพจ
       white: '#E2CEF3',      // สีใช้แทน white ใน border บางจุด
       textMain: '#8e83fc',   // ⭐ สีหลักของข้อความและปุ่มหลัก (ม่วง)
-      textSoft: '#A788DC',   // สีข้อความรอง
+      textSoft: '#dd8df7',   // สีข้อความรอง
       pinkDeep: '#8e83fc',   // สี accent เข้ม (ปุ่ม, badge)
       blueDeep: '#7D45C6',   // สี accent เข้ม (title, icon)
       purpleDeep: '#8e83fc', // สี accent เข้ม (label, text)
-      orangeDeep: '#A788DC', // สี accent เข้ม (NEXT QUEUE label)
+      orangeDeep: '#dd8df7', // สี accent เข้ม (NEXT QUEUE label)
     };
 
     // ==========================================
@@ -124,7 +124,7 @@
               <h1 className="text-2xl font-black italic tracking-tighter flex">
                 {/* ✏️ [แก้ได้] เปลี่ยนชื่อแอปที่นี่ เช่น "MYSHOP".split('') */}
                 {"waray".split('').map((char, index) => (
-                  <span key={index} className="bg-gradient-to-br from-[#93a4ff] to-[#c7c5fe] bg-clip-text text-transparent drop-shadow-sm inline-block animate-text-wave" style={{ animationDelay: `${index * 0.1}s` }}>{char}</span>
+                  <span key={index} className="bg-gradient-to-br from-[#8e83fc] to-[#93a4ff] bg-clip-text text-transparent drop-shadow-sm inline-block animate-text-wave" style={{ animationDelay: `${index * 0.1}s` }}>{char}</span>
                 ))}
               </h1>
               {/* ✏️ [แก้ได้] ปุ่ม Admin/Guest badge — ถ้าไม่ต้องการแสดงให้ลบ <button> นี้ออก */}
@@ -341,7 +341,7 @@
             ) : (
               // ✏️ [แก้ได้] ข้อความแสดงสถานะสำหรับ Guest
               <div className="flex items-center">
-                {task.status === 'doing' && <span className="text-[10px] font-bold text-[#A788DC] flex items-center gap-1 bg-[#f4f0fc] px-2 py-1 rounded-md border border-[#CCAAE6] shadow-sm"><IconLoader size={10} className="animate-spin-slow"/> กำลังทำ</span>}
+                {task.status === 'doing' && <span className="text-[10px] font-bold text-[#dd8df7] flex items-center gap-1 bg-[#f4f0fc] px-2 py-1 rounded-md border border-[#CCAAE6] shadow-sm"><IconLoader size={10} className="animate-spin-slow"/> กำลังทำ</span>}
                 {task.status === 'done' && <span className="text-[10px] font-bold text-[#8e83fc] flex items-center gap-1 bg-white px-2 py-1 rounded-md border border-[#CCAAE6] shadow-sm"><IconCheck size={10} /> เสร็จแล้ว</span>}
                 {task.status === 'todo' && <span className="text-[10px] font-bold text-gray-400 flex items-center gap-1 bg-gray-50 px-2 py-1 rounded-md border border-gray-100 shadow-sm"><IconClock size={10} /> รอคิว</span>}
               </div>
@@ -371,15 +371,15 @@
       return (
         <div className="bg-white/90 backdrop-blur-xl rounded-[32px] p-5 shadow-[0_12px_30px_rgba(226,206,243,0.5)] border-[4px] border-white mb-5 animate-fadeIn">
           <div className="flex justify-between items-center mb-4 px-2">
-            <button onClick={() => setCurrentMonth(new Date(year, month - 1, 1))} className="p-1.5 hover:bg-[#E2CEF3] rounded-full transition-colors text-[#A788DC]"><IconChevronLeft size={20}/></button>
+            <button onClick={() => setCurrentMonth(new Date(year, month - 1, 1))} className="p-1.5 hover:bg-[#E2CEF3] rounded-full transition-colors text-[#dd8df7]"><IconChevronLeft size={20}/></button>
             <h3 className="font-black text-[16px] text-[#7D45C6] tracking-widest">{monthNames[month]} {year}</h3>
-            <button onClick={() => setCurrentMonth(new Date(year, month + 1, 1))} className="p-1.5 hover:bg-[#E2CEF3] rounded-full transition-colors text-[#A788DC]"><IconChevronRight size={20}/></button>
+            <button onClick={() => setCurrentMonth(new Date(year, month + 1, 1))} className="p-1.5 hover:bg-[#E2CEF3] rounded-full transition-colors text-[#dd8df7]"><IconChevronRight size={20}/></button>
           </div>
           
           {/* ✏️ [แก้ได้] ชื่อวันใน header ปฏิทิน — เปลี่ยนเป็นภาษาไทย เช่น ['อา','จ','อ','พ','พฤ','ศ','ส'] */}
           <div className="grid grid-cols-7 gap-1 text-center mb-3">
             {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(d => (
-              <div key={d} className="text-[9px] font-black text-[#A788DC] opacity-60 uppercase">{d}</div>
+              <div key={d} className="text-[9px] font-black text-[#dd8df7] opacity-60 uppercase">{d}</div>
             ))}
           </div>
           
@@ -401,7 +401,7 @@
                         ? 'bg-[#8e83fc] text-white rounded-full font-black shadow-md scale-105'
                         : isToday 
                           ? 'text-[#8e83fc] font-black bg-[#E2CEF3] rounded-full border-[2px] border-white'
-                          : 'text-[#A788DC] font-bold hover:bg-[#f4f0fc] hover:border-[2px] hover:border-white hover:shadow-sm rounded-full'
+                          : 'text-[#dd8df7] font-bold hover:bg-[#f4f0fc] hover:border-[2px] hover:border-white hover:shadow-sm rounded-full'
                     }`}
                   >
                     <span className="text-[13px] z-10 leading-none">{day}</span>
@@ -730,7 +730,7 @@
                          </button>
                        )}
                        {isAdmin && (
-                         <button onClick={() => toggleBannerVisibility(false)} className="p-1.5 bg-white/90 backdrop-blur-md rounded-full shadow-sm text-gray-500 hover:text-[#A788DC] transition-colors" title="ซ่อนแบนเนอร์">
+                         <button onClick={() => toggleBannerVisibility(false)} className="p-1.5 bg-white/90 backdrop-blur-md rounded-full shadow-sm text-gray-500 hover:text-[#dd8df7] transition-colors" title="ซ่อนแบนเนอร์">
                             <IconEyeOff size={16} />
                          </button>
                        )}
@@ -1072,5 +1072,6 @@
   </script>
 </body>
 </html>
+
 
 
